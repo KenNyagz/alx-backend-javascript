@@ -1,13 +1,16 @@
-function getResponseFromAPI() {
+export default function getResponseFromAPI() {
   return new Promise((resolve, reject) => {
-    setTimeOut(() => {
-      const success - true;
-      if (success) {
-        resolve('API response data'); // Resolve with response data
-      } else {
-        reject(new Error('Failed to fetch data')); // Reject with an error
-      }
-    }, 2000);
-    }
+    // Perform API request or any asynchronous operation
+    // Example: Fetch data from an API
+    fetch('https://api.example.com/data')
+      .then(response => response.json())
+      .then(data => {
+        // Resolve the Promise with the API response data
+        resolve(data);
+      })
+      .catch(error => {
+        // Reject the Promise with the error
+        reject(error);
+      });
   });
 }
