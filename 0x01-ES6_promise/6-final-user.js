@@ -6,7 +6,7 @@ export default function handleProfileSignup(firstName, lastName, fileName) {
     signUpUser(firstName, lastName),
     uploadPhoto(fileName)]
   ).then((results) => {
-    return results.mao((result) => {
+    return results.map((result) => {
       return {
         status: result.status,
         value: result.status === 'fulfilled' ? result.value : result.reason
