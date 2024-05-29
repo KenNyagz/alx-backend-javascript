@@ -8,12 +8,12 @@ export default function handleProfileSignup(firstName, lastName, fileName) {
   return Promise.allSettled([signUpPromise, uploadPhotoPromise])
     .then((results) => {
       // Map the results to the desired structure
-      result = []
-      return results.map((result) => {
-        if (result.status === 'fulfilled') {
-          result.push({ status: result.status, value: result.value });
+      let result = []
+      results.map((reslt) => {
+        if (reslt.status === 'fulfilled') {
+          result.push({ status: reslt.status, value: reslt.value });
         } else {
-          result.push({ status: result.status, value: result.reason });
+          result.push({ status: reslt.status, value: reslt.reason.toString() });
         }
       });
       return result;
