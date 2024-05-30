@@ -32,13 +32,13 @@ export default class Pricing {
     return amount * conversionRate;
   }
 
-  _validateAmount(amount) {
+  static _validateAmount(amount) {
     if (typeof amount !== 'number') {
       throw new TypeError('Amount must be a number');
     }
   }
 
-  _validateCurrency(currency) {
+  static _validateCurrency(currency) {
     if (!(currency instanceof Currency)) {
       throw new TypeError('Currency must be an instance of Currency');
     }
