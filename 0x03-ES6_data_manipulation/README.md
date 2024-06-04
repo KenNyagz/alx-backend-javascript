@@ -1,6 +1,6 @@
 **ES6 data manipulation**
 
-*Learning objcetives: *
+*Learning objcetives:*
 
 - How to use map, filter and reduce on arrays
 - Typed arrays
