@@ -34,5 +34,7 @@ var Subjects;
         };
         return Java;
     }(Subject));
+    Subjects.Java = Java;
 })(Subjects || (Subjects = {}));
+export { Subjects };
 //# sourceMappingURL=Java.js.map

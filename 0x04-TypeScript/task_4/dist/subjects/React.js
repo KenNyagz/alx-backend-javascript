@@ -37,4 +37,5 @@ var Subjects;
     }(Subject));
     Subjects.React = React;
 })(Subjects || (Subjects = {}));
+export { Subjects };
 //# sourceMappingURL=React.js.map

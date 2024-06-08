@@ -5,7 +5,8 @@ namespace Subjects {
     experienceTeachingJava?: number;
   }
 
-  class Java extends Subject {
+  export class Java extends Subject {
+    teacher: Teacher;
     getRequirements(): string {
       return 'Here is the list of requirements for Cpp';
     }
@@ -20,3 +21,5 @@ namespace Subjects {
 
   }
 }
+
+export { Subjects };

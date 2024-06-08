@@ -7,6 +7,7 @@ namespace Subjects {
   }  
 
   export class React extends Subject{
+    teacher: Teacher;
     getRequirements(): string {
       return 'Here is the list of requirements for React';
     }
@@ -21,3 +22,5 @@ namespace Subjects {
 
   }
 }
+
+export { Subjects };
