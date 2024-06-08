@@ -24,7 +24,7 @@ interface StudentInterface {
   displayName(): string;
 }
 
-const director1: Directors = {
+const director1: Director = {
   firstName: 'John',
   lastName: 'Doe',
   location: 'London',
@@ -37,6 +37,9 @@ function printTeacher(firstName: string, lastName: string) {
 }
 
 class StudentClass implements StudentInterface {
+  private firstName;
+  private lastName;
+
   constructor(firstName: string, lastName: string) {
     this.firstName = firstName;
     this.lastName = lastName;

@@ -3,14 +3,14 @@ var teacher = {
     lastName: 'Doe',
     fullTimeEmployee: true,
     location: 'Casablanca',
-    contract: true
+    contract: true,
 };
 var director1 = {
     firstName: 'John',
     lastName: 'Doe',
     location: 'London',
     fullTimeEmployee: true,
-    numberOfReports: 17
+    numberOfReports: 17,
 };
 function printTeacher(firstName, lastName) {
     return firstName[0] + '. ' + lastName;
