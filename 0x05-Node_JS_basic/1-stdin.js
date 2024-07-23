@@ -9,7 +9,8 @@ console.log('Welcome to Holberton School, what is your name?');
 
 rl.on('line', (input) => {
   console.log(`Your name is: ${input}`);
-  rl.close();
+  process.exit(0)
+  //rl.close();
 });
 
 rl.on('close', () => {
