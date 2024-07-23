@@ -11,7 +11,7 @@ function countStudents (filePath) {
     }
 
     const categories = lines[0].split(',');
-    const studentLines = lines.splice(1);
+    const studentLines = lines.slice(1);
 
     // Filter out invalid lines that don't fit expected format
     const validStudentLines = studentLines.filter(line => line.split(',').length === categories.length);
