@@ -15,9 +15,9 @@ async function countStudents (filePath) {
     // Filter out lines that don't match expected format
     const validStudents = studentLines.filter(line => line.split(',').length === headers.length);
 
-    console.log(`Number of students: ${validStudents.length}`);
-
+    totalStudents = validStudents.length;
     const fieldCounts = {};
+
     validStudents.forEach(line => {
       const [firstName, , , field] = line.split(',');
 
@@ -30,12 +30,16 @@ async function countStudents (filePath) {
 
       fieldCounts[field].count += 1;
       fieldCounts[field].students.push(firstName);
-
-      for (const field in fieldCounts) {
-        const { count, students } = fieldCounts[field];
-        console.log(`Number of students in ${field}: ${count}. List: ${students.join(', ')}`);
-      }
     });
+
+    let output = `Number of students: ${totalStudents}\n`;
+    for (const field in fieldCounts) {
+      const { count, students } = fieldCounts[field];
+      output += (`Number of students in ${field}: ${count}. List: ${students.join(', ')}\n`);
+      console.log(`Number of students in ${field}: ${count}. List: ${students.join(', ')}\n`);
+    }
+
+  return output
   } catch (err) {
     console.error(err);
   }
