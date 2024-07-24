@@ -35,7 +35,7 @@ async function countStudents (filePath) {
     let output = `Number of students: ${totalStudents}\n`;
     for (const field in fieldCounts) {
       const { count, students } = fieldCounts[field];
-      output += (`Number of students in ${field}: ${count}. List: ${students.join(', ')}\n`);
+      output += (`Number of students in ${field}: ${count}. List: ${students.join(', ')}`);
       console.log(`Number of students in ${field}: ${count}. List: ${students.join(', ')}`);
     }
 
