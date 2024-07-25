@@ -4,7 +4,7 @@
   "description": "**0x06-unittests_in_js**",
   "main": "app.js",
   "scripts": {
-    "test": "mocha tests"
+    "test": "mocha"
   },
   "author": "Ken",
   "license": "ISC",
