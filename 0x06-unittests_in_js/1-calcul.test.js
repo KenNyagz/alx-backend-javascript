@@ -27,4 +27,18 @@ describe('calculateNumber', function () {
     assert.equal(calculateNumber('DIVIDE', 6.3, 3.4), 2);
     assert.equal(calculateNumber('DIVIDE', 6.3, 3), 2);
   });
+
+  it('tests division by zero', function() {
+    assert.strictEqual(calculateNumber('DIVIDE', 5, 0), 'Error'); 
+    assert.strictEqual(calculateNumber('DIVIDE', -5, 0), 'Error');
+  });
+
+  it('tests dividing zero, should return 0', function() {
+    assert.equal(calculateNumber('DIVIDE', 0, -5), 0);
+    assert.equal(calculateNumber('DIVIDE', 0, 5), 0);
+  });
+
+  it('tests invalid opertion type', function() {
+    assert.throws(() => calculateNumber('MULT', 5, 6), 'Invalid type');
+  });
 });
