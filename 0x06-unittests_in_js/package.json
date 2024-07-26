@@ -9,10 +9,9 @@
   "author": "Ken",
   "license": "ISC",
   "devDependencies": {
+    "chai": "^4.5.0",
     "mocha": "^10.7.0",
-    "nodemon": "^3.1.4"
-  },
-  "dependencies": {
-    "chai": "^4.5.0"
+    "nodemon": "^3.1.4",
+    "sinon": "^18.0.0"
   }
 }
