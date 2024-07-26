@@ -1,10 +1,12 @@
+/* eslint-env mocha */
+
 const sinon = require('sinon');
 const expect = require('chai').expect;
 const sendPaymentRequestToApi = require('./3-payment');
 const Utils = require('./utils');
 
-describe("sendPaymentRequestToApi", function() {
-  it('tests summing Utils.calculateNumber', function() {
+describe('sendPaymentRequestToApi', function () {
+  it('tests summing Utils.calculateNumber', function () {
     const calculateNumberSpy = sinon.spy(Utils, 'calculateNumber');
     const consoleLogSpy = sinon.spy(console, 'log');
 
@@ -17,5 +19,4 @@ describe("sendPaymentRequestToApi", function() {
     calculateNumberSpy.restore();
     consoleLogSpy.restore();
   });
-
 });

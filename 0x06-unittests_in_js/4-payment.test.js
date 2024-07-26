@@ -1,3 +1,5 @@
+/* eslint-env mocha */
+
 const sinon = require('sinon');
 const expect = require('chai').expect;
 const sendPaymentRequestToApi = require('./4-payment');

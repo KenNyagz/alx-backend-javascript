@@ -1,3 +1,5 @@
+/* eslint-env mocha */
+
 const { expect } = require('chai');
 const calculateNumber = require('./1-calcul');
 
@@ -28,17 +30,17 @@ describe('calculateNumber', function () {
     expect(calculateNumber('DIVIDE', 6.3, 3)).to.equal(2);
   });
 
-  it('tests division by zero', function() {
-    expect(calculateNumber('DIVIDE', 5, 0)).to.equal('Error'); 
+  it('tests division by zero', function () {
+    expect(calculateNumber('DIVIDE', 5, 0)).to.equal('Error');
     expect(calculateNumber('DIVIDE', -5, 0)).to.equal('Error');
   });
 
-  it('tests dividing zero, should return 0', function() {
+  it('tests dividing zero, should return 0', function () {
     expect(calculateNumber('DIVIDE', 0, -5)).to.equal(0);
     expect(calculateNumber('DIVIDE', 0, 5)).to.equal(0);
   });
 
-  it('tests invalid opertion type', function() {
+  it('tests invalid opertion type', function () {
     expect(() => calculateNumber('MULT', 5, 6)).to.throw('Invalid operation');
   });
 });
