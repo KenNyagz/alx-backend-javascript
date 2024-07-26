@@ -1,6 +1,6 @@
-//const request = require('supertest');
+const request = require('supertest');
 const { expect } = require('chai');
-/*const app = require('./api');
+const app = require('./api');
 
 describe('Index Page', function() {
   it('should return the correct status code', function(done) {
@@ -22,18 +22,5 @@ describe('Index Page', function() {
         if (err) return done(err);
         done()
       });
-  });
-});*/
-
-const request = require('request');
-describe('Index page', () => {
-  describe('GET /', () => {
-    it('Tests output of GET / request', (done) => {
-      request('http://localhost:7865', (err, res, body) => {
-        expect(res.statusCode).to.equal(200);
-        expect(body).to.equal('Welcome to the payment system');
-        done();
-      });
-    });
   });
 });
